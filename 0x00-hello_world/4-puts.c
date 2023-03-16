@@ -1,8 +1,9 @@
 #include <stdio.h>
-/*
- * main - start of the program
- * function_puts - prints out a string
- * return: 0 to end the program
+
+/**
+ * main - this is the main function
+ *
+ * Return: always 0
  */
 int main(void)
 {
