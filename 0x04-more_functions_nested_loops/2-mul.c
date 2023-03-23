@@ -5,7 +5,7 @@
  * @b: multiplied by a
  * Return: Always 0
  */
-int nul(int a, int b)
+int mul(int a, int b)
 {
 	return (a * b);
 }
