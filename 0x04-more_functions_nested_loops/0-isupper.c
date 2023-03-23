@@ -2,7 +2,6 @@
 /**
  * _isupper - determines case sensitivity
  *@c: character to check
-
  * Return: 1 if uppercase, 0 therwise
  */
 int _isupper(int c)
