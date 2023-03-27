@@ -17,8 +17,8 @@ void rev_string(char *s)
 
 	for (counter = length - 1; counter >= length / 2; counter--)
 	{
-		placeholder = s[counter];
+		placeHolder = s[counter];
 		s[counter] = s[length - counter - 1];
-		s[length - counter - 1] = placeholder;
+		s[length - counter - 1] = placeHolder;
 	}
 }
