@@ -7,7 +7,7 @@
  */
 void puts2(char *str)
 {
-	int c; 
+	int c;
 	int a = 0;
 
 	while (str[a] != '\0')
@@ -20,4 +20,4 @@ void puts2(char *str)
 		_putchar(str[c]);
 	}
 	_putchar('\n');
-}	
+}
