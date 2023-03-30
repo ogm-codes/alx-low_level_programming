@@ -18,12 +18,11 @@ char *cap_string(char *str)
 
 	for (int i = 1; i < len; i++)
 	{
-        // Capitalize first letter of each word
 		if (islower(str[i]) && (strchr(delimiters, str[i - 1]) != NULL))
 		{
 			str[i] = toupper(str[i]);
 		}
 	}
-	
+
 	return (str);
 }
