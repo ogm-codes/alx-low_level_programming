@@ -1,4 +1,6 @@
 #include "main.h"
+#include <ctype.h>
+#include <string.h>
 /**
  * cap_string - capitalize words of string
  * @str: pointer
@@ -6,31 +8,22 @@
  */
 char *cap_string(char *str)
 {
-	int index = 0;
+	const char seperators = "\t\n,;.!?\"(){}";
+	int length = strlen(str);
 
-	while (str[index])
+	if (len > 0 && islower(str[0]))
 	{
-		while (!(str[index] >= 'a' && str[index] <= 'z'))
-		{
-			index++;
+		str[0] = toupper(str[0]);
+	}
 
-			if (str[index - 1] == ' ' ||
-			str[index - 1] == '\t' ||
-			str[index - 1] == '\n' ||
-			str[index - 1] == ',' ||
-			str[index - 1] == ';' ||
-			str[index - 1] == '.' ||
-			str[index - 1] == '!' ||
-			str[index - 1] == '?' ||
-			str[index - 1] == '"' ||
-			str[index - 1] == '(' ||
-			str[index - 1] == ')' ||
-			str[index - 1] == '{' ||
-			str[index - 1] == '}' ||
-			index == 0)
-				str[index] -= 32;
-			index++;
+	for (int i = 1; i < len; i++)
+	{
+        // Capitalize first letter of each word
+		if (islower(str[i]) && (strchr(delimiters, str[i - 1]) != NULL))
+		{
+			str[i] = toupper(str[i]);
 		}
 	}
+	
 	return (str);
 }
