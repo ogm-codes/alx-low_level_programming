@@ -3,7 +3,7 @@
  * _strcmp - compares pointers to strings
  * @s1: first string compared
  * @s2: second string compared
- * Return: difference of unmatched strings 
+ * Return: difference of unmatched strings
  */
 int _strcmp(char *s1, char *s2)
 {
