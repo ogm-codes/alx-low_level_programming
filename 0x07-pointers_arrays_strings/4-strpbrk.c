@@ -1,14 +1,13 @@
 #include "main.h"
 /**
  * _strpbrk - searches string for set of bytes
- * @s: first string argument
- * @accept: second string argument
- * return: NULL
+ * @s: first string args
+ * @accept: second string arg
+ * Return: Null
  */
 char *_strpbrk(char *s, char *accept)
 {
-	int a;
-	int b;
+	int a, b;
 
 	for (a = 0; s[a] != '\0'; a++)
 	{
@@ -21,5 +20,5 @@ char *_strpbrk(char *s, char *accept)
 		}
 	}
 
-	return (0);
+	return (NULL);
 }
