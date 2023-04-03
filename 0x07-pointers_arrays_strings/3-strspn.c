@@ -5,7 +5,7 @@
  * @accept:
  * Return:
  */
-unsigned int _strspn(char *s. char *accept)
+unsigned int _strspn(char *s, char *accept)
 {
 	int a, b;
 	int count, checker;
@@ -20,6 +20,7 @@ unsigned int _strspn(char *s. char *accept)
 			if (accept[b] == s[a])
 			{
 				count++;
+				checker = 1;
 			}
 		}
 	}
