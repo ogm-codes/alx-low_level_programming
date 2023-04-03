@@ -6,7 +6,7 @@
  * @b: constant byte
  * Return: @s
  */
-char *_memset(char *s, char b, unnsigned int n)
+char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int a;
 
@@ -15,5 +15,5 @@ char *_memset(char *s, char b, unnsigned int n)
 		s[a] = b;
 	}
 
-	return (a);
+	return (s);
 }
