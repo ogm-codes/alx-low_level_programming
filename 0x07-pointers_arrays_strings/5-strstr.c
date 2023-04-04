@@ -3,7 +3,7 @@
  * _strstr - locates a substing
  * @needle: second argument
  * @haystack: first argument
- * Return: 
+ * Return: haystack
  */
 char *_strstr(char *haystack, char *needle)
 {
