@@ -8,12 +8,12 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int s1, s2;
+	int s1, s2, c, n;
 	
 	s1 = 0;
 	s2 = 0;
 
-	for (int c = 0; c <= (size * size); c = c + size + 1)
+	for (c = 0; c <= (size * size); c = c + size + 1)
 	{
 		s1 = s1 + a[c];
 	}
