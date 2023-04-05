@@ -6,15 +6,26 @@
  */
 int _sqrt_recursion(int n)
 {
-	int sqr = 0;
-
-	if (n == 1)
-	{
-		return (1);
-	}
-
-	if (n < 0)
+	return (sqr(n, 1));
+}
+/**
+ * sqr - does a math formula to square a number
+ * @x: calculates square
+ * @y: an interation integr
+ * Return: square root of number
+ */
+int sqr(int x, int y)
+{
+	int sqrt = x * x;
+	if (sqrt > y)
 	{
 		return (-1);
 	}
+
+	if (sqrt == y)
+	{
+		return (y);
+	}
+
+	return (sqr(x, y + 1);
 }
