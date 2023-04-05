@@ -10,14 +10,14 @@
  */
 int sqr(int x, int y)
 {
-	int sqrt = x * x;
+	int sqrt = y * y;
 
-	if (sqrt > y)
+	if (sqrt > x)
 	{
 		return (-1);
 	}
 
-	if (sqrt == y)
+	if (sqrt == x)
 	{
 		return (y);
 	}
