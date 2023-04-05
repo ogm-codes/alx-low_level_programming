@@ -17,6 +17,7 @@ int _sqrt_recursion(int n)
 int sqr(int x, int y)
 {
 	int sqrt = x * x;
+
 	if (sqrt > y)
 	{
 		return (-1);
@@ -27,5 +28,5 @@ int sqr(int x, int y)
 		return (y);
 	}
 
-	return (sqr(x, y + 1);
+	return (sqr(x, y + 1));
 }
