@@ -1,14 +1,5 @@
 #include "main.h"
 /**
- * is_prime_number - determines if n is a prime number or not
- * @n: number to be determined if its a prime number or not
- * Return: 1 if n is prime otherwise 0
- */
-int is_prime_number(int n)
-{
-	return (check(n, 1));
-}
-/**
  * check - determine if x is prime
  * @x: number to be checked
  * @y: the mod% number
@@ -32,4 +23,13 @@ int check(int x, int y)
 	}
 
 	return (check(x, y + 1));
+}
+/**
+ * is_prime_number - checks if n is a prime number
+ * @n: number to be checked
+ * Return: 1 if n is prime or 0 if not
+ */
+int is_prime_number(int n)
+{
+	return (check(n, 1));
 }
