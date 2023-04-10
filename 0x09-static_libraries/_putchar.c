@@ -4,12 +4,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * _strcmp - compares strings
- * @s1: input
- * @s2: input
+ * _putchar - prints @c to stdout
+ * @c: character printed
  * Return: standard library version
  */
-int _strcmp(char *s1, char *s2)
+int _putchar(char c)
 {
-	return (strcmp(s1, s2));
+	return (putchar(c));
 }

@@ -4,12 +4,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * _strcmp - compares strings
- * @s1: input
- * @s2: input
+ * _atoi - converts string to integer
+ * @s: string to be converted
  * Return: standard library version
  */
-int _strcmp(char *s1, char *s2)
+int _atoi(char *s)
 {
-	return (strcmp(s1, s2));
+	return (atoi(s));
 }
