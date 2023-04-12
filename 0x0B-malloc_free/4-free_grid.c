@@ -3,7 +3,7 @@
 /**
  * free_grid - frees 2D grid from alloc_grid
  * @grid: refers to alloc_grid
- * @height:
+ * @height: height of grid
  * Return: void
  */
 void free_grid(int **grid, int height)
