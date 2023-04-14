@@ -25,8 +25,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	while (s2[b])
 		b++;
 
-	if (n >= b)
-		d = a + b;
+	if (n >= c)
+		d = a + c;
 	else
 		d = a + n;
 
