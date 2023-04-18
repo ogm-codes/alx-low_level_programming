@@ -49,7 +49,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	return (dog);
 }
 /**
- * _strcopy - copies a string
+ * _strcpy - copies a string
  * @dest: destination
  * @src: source
  *
