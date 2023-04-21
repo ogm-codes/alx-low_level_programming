@@ -4,52 +4,40 @@
 /**
  * print_all - only prints strings in the parameters
  * @format: format like int or char
- *
  * Return: void
  */
 void print_all(const char * const format, ...)
 {
 	va_list list;
-	char *string;
-	const char args[] = "cifs";
-	unsigned int a = 0, b, c = 0;
+	const char *string;
 
 	va_start(list, format);
 
-	while (format && format[a])
+	string = format;
+	while (*string)
 	{
-		b = 0;
-		while (args[b])
+		if (*string == 'c')
+			printf("%c", va_arg(list, int));
+		else if (*string == 'i')
 		{
-			if (format[a] == args[b] && c)
-			{
-				printf(", ");
-				break;
-			}
-			b++;
+			printf("%d", va_arg(list, int));
 		}
-		switch (format[a])
+		else if (*string == 'f')
 		{
-			case 'c' :
-				printf("%c", va_arg(list, int)), c = 1;
-				break;
-			case 'i' :
-				printf("%d", va_arg(list, int)), c = 1;
-				break;
-			case 'f' :
-				printf("%f", va_arg(list, double)), c = 1;
-				break;
-			case 's' :
-				string = va_arg(list, char *);
-				if (!string)
-				{
-					printf("(nil)");
-					break;
-				}
-				printf("%s", string);
-				break;
+			printf("%f", va_arg(list, double));
 		}
-		a++;
+		else if (*string == 's')
+		{
+			printf("%s", va_arg(list, char *));
+		}
+		string++;
+
+			if (*string && (*string == 'c' ||
+					*string == 'i' ||
+					*string == 'f' ||
+					*string == 's'))
+					printf(", ");
 	}
 	printf("\n");
-}	
+	va_end(list);
+}
