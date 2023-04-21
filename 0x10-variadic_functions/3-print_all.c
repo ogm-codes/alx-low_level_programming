@@ -9,35 +9,43 @@
 void print_all(const char * const format, ...)
 {
 	va_list list;
-	const char *string;
+	char *string;
+	const char args[] = "cifs";
+	unsigned int a = 0, b, c = 0;
 
 	va_start(list, format);
-
-	string = format;
-	while (*string)
+	while (format && format[a])
 	{
-		if (*string == 'c')
-			printf("%c", va_arg(list, int));
-		else if (*string == 'i')
+		b = 0;
+		while (args[b])
 		{
-			printf("%d", va_arg(list, int));
+			if (format[a] == args[b] && c)
+			{
+				printf(", ");
+				break;
+			}
+			b++;
 		}
-		else if (*string == 'f')
+		switch (format[a])
 		{
-			printf("%f", va_arg(list, double));
-		}
-		else if (*string == 's')
-		{
-			printf("%s", va_arg(list, char *));
-		}
-		string++;
-
-			if (*string && (*string == 'c' ||
-					*string == 'i' ||
-					*string == 'f' ||
-					*string == 's'))
-					printf(", ");
-	}
-	printf("\n");
-	va_end(list);
+			case 'c':
+				printf("%c", va_arg(list, int)), c = 1;
+				break;
+			case 'i':
+				printf("%d", va_arg(list, int)), c = 1;
+				break;
+			case 'f':
+				printf("%f", va_arg(list, double)), c = 1;
+				break;
+			case 's':
+				string = va_arg(list, char *);
+				if (!string)
+				{
+					printf("(nil)");
+					break;
+				}
+				printf("%s", string);
+				break;
+		} a++;
+	} printf("\n");
 }
