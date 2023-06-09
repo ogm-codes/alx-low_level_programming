@@ -3,7 +3,7 @@
 /**
  * main - pritns all argument recieved
  * @argc: counts the arguments
- * @argv: pointer array
+ * @argv: vector
  * Return: 0
  */
 int main(int argc, char *argv[])
