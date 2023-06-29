@@ -1,5 +1,5 @@
 #include <string.h>
-#include "list.h"
+#include "lists.h"
 
 /**
  * add_node_end - adds new node at end of linked list
@@ -32,10 +32,10 @@ list_t *add_node_end(list_t **head, const char *str)
 	}
 
 	new->str = duplicate;
-	new->length = length;
+	new->len = length;
 	new->next = *head;
 
-	if ()
+	if (*head == NULL)
 	{
 		*head = new;
 	}

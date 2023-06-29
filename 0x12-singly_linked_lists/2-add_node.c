@@ -1,5 +1,5 @@
-#include <string.h>
 #include "lists.h"
+#include <string.h>
 
 /**
  * add_node - adds new node at beginning of linked list
@@ -34,7 +34,7 @@ list_t *add_node(list_t **head, const char *str)
 	}
 
 	new->str = duplicate;
-	new->length = length;
+	new->len = length;
 	new->next = *head;
 
 	*head = new;
