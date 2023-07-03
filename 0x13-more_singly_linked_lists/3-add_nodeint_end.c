@@ -1,10 +1,10 @@
 #include "lists.h"
 
 /**
- * add_nodeint_end -
- * @head:
- * @n:
- * Return:
+ * add_nodeint_end - adds new node at end of linked list
+ * @head: pointer to pinter of head node of list
+ * @n: int vale to be stored in new node
+ * Return: pointer to newly added node
  */
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
@@ -18,10 +18,19 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	new->n = n;
 	new->next = NULL;
 
-	if ()
+	if (*head == NULL)
 	{
+		*head = new;
 	}
 	else
 	{
+		last = *head;
+
+		while (last->next != NULL)
+			last = last->next;
+
+		last->next = new;
 	}
+
+	return (**head);
 }
